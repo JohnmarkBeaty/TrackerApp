@@ -1,0 +1,12 @@
+<table class="table">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <h2><%= @app.name %></h2>
+  <%= @app.description %>
+</p>
+
+<%= link_to 'Back', apps_path, class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'Edit', edit_app_path(@app), class: 'btn btn-primary btn-xs' %>
+
+</table>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Versionnumber:</strong>
+  <%= @version.versionNumber %>
+</p>
+
+<p>
+  <strong>Buildnumber:</strong>
+  <%= @version.buildNumber %>
+</p>
+
+<p>
+  <strong>Descript:</strong>
+  <%= @version.descript %>
+</p>
+
+<p>
+  <strong>Changelog:</strong>
+  <%= @version.changeLog %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @version.icon %>
+</p>
+
+<%= link_to 'Edit', edit_version_path(@version) %> |
+<%= link_to 'Back', versions_path %>

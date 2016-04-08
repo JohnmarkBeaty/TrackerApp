@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  versionNumber: MyString
+  buildNumber: MyString
+  descript: MyString
+  changeLog: MyString
+  icon: MyString
+
+two:
+  versionNumber: MyString
+  buildNumber: MyString
+  descript: MyString
+  changeLog: MyString
+  icon: MyString

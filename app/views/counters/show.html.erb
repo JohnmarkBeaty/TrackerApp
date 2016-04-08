@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @counter.title %>
+</p>
+
+<p>
+  <strong>Currentvalue:</strong>
+  <%= @counter.currentValue %>
+</p>
+
+<p>
+  <strong>Stepsize:</strong>
+  <%= @counter.stepSize %>
+</p>
+
+<%= link_to 'Edit', edit_counter_path(@counter) %> |
+<%= link_to 'Back', counters_path %>
