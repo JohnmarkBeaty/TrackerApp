@@ -6,6 +6,8 @@ class CreateVersions < ActiveRecord::Migration
       t.string :descript
       t.string :changeLog
       t.string :icon
+      t.string :bgColor
+      t.references :app, index: true, foreign_key: true
 
       t.timestamps null: false
     end

@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @app %> |
-<%= link_to 'Back', apps_path %>
+<br>
+<%= link_to 'Back', apps_path, class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'Edit', edit_app_path(@app), class: 'btn btn-primary btn-xs' %>

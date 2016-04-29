@@ -3,10 +3,28 @@
 
 <p>
   <h2><%= @app.name %></h2>
-  <%= @app.description %>
+  <!-- Should be current version description -->
 </p>
-
-<%= link_to 'Back', apps_path, class: 'btn btn-primary btn-xs' %> |
-<%= link_to 'Edit', edit_app_path(@app), class: 'btn btn-primary btn-xs' %>
+<tr>
+  <th>Version</th>
+  <th>Description</th>
+  <th>Change Log</th>
+</tr>
+<% @app.versions.each do |v| %>
+  <tr>
+    <td><%= v.versionNumber %></td>
+    <td><%= v.descript %></td>
+    <td><%= v.changeLog %></td>
+  </tr>
+  <% end %>
+  <% if @app.versions.size == 0 %>
+    <em>Sorry, no versions have been added yet!</em>
+  <% end %>
+<tr>
+  <td><%= link_to 'Back', apps_path, class: 'btn btn-primary btn-xs' %>
+  <%= link_to 'Edit', edit_app_path(@app), class: 'btn btn-primary btn-xs' %></td>
+  <td></td>
+  <td></td>
+</tr>
 
 </table>

@@ -6,6 +6,8 @@ one:
   descript: MyString
   changeLog: MyString
   icon: MyString
+  bgColor: MyString
+  app_id: 
 
 two:
   versionNumber: MyString
@@ -13,3 +15,5 @@ two:
   descript: MyString
   changeLog: MyString
   icon: MyString
+  bgColor: MyString
+  app_id: 

@@ -10,6 +10,11 @@ class AppsController < ApplicationController
   # GET /apps/1
   # GET /apps/1.json
   def show
+    # @app = App.all
+    # respond_to do |format|
+    #   format.html #show.html.erb
+    #   format.json { render :json => @app.to_json(:include => :version) }
+    # end
   end
 
   # GET /apps/new
@@ -28,7 +33,8 @@ class AppsController < ApplicationController
 
     respond_to do |format|
       if @app.save
-        format.html { redirect_to @app, notice: 'App was successfully created.' }
+        # format.html { redirect_to @app, notice: 'App was successfully created.' }
+        # format.json { render :json => app.as_json, status: :created}
         format.json { render :show, status: :created, location: @app }
       else
         format.html { render :new }
@@ -69,6 +75,6 @@ class AppsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def app_params
-      params.require(:app).permit(:name)
+      params.require(:app).permit(:name, :versions)
     end
 end

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>TrackerApp</title>
+  <%= favicon_link_tag 'at-icon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,7 +12,8 @@
 <div id="main-container" class="container">
   <div class="row">
     <div class="col-xs-3">
-      <h3>drawChicken</h3>
+      <h3><%= image_tag("dc-logo.png", height: '60', width: '60', :alt => "Draw Chicken logo") %>drawChicken</h3>
+
     </div>
     <div class="col-xs-9">
       <%= yield %>

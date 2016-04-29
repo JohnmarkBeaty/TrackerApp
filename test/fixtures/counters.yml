@@ -2,10 +2,12 @@
 
 one:
   title: MyString
-  currentValue: 1.5
-  stepSize: 1.5
+  currentValue: MyString
+  stepSize: MyString
+  app_id: 
 
 two:
   title: MyString
-  currentValue: 1.5
-  stepSize: 1.5
+  currentValue: MyString
+  stepSize: MyString
+  app_id: 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407044040) do
+ActiveRecord::Schema.define(version: 20160422013511) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -21,11 +21,14 @@ ActiveRecord::Schema.define(version: 20160407044040) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "title"
-    t.float    "currentValue"
-    t.float    "stepSize"
+    t.string   "currentValue"
+    t.string   "stepSize"
+    t.integer  "app_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "counters", ["app_id"], name: "index_counters_on_app_id"
 
   create_table "versions", force: :cascade do |t|
     t.string   "versionNumber"
@@ -33,8 +36,12 @@ ActiveRecord::Schema.define(version: 20160407044040) do
     t.string   "descript"
     t.string   "changeLog"
     t.string   "icon"
+    t.string   "bgColor"
+    t.integer  "app_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
+  add_index "versions", ["app_id"], name: "index_versions_on_app_id"
 
 end
